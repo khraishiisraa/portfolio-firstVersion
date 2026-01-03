@@ -1,0 +1,494 @@
+/* استدعاء تنسيقات خط جوجل */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0px;;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+/* متغيرات الالوان بدل التكرار  */
+:root {
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #ffffff;
+    --main-color-: #0ef;
+}
+
+html {
+    font-size: 62.5%;
+    overflow: hidden;
+    height: 100%;
+    /* display: flex; */
+    
+}  
+/* لا يمكن الجمع بين:
+
+html/body { display:flex }
+
+ونظام صفحات مخفية (.page.active)
+
+إما هذا أو ذاك. */
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    /*يجعل الصفحات اسفل بعض ومكررات*/
+    /* overflow-x: hidden;     */
+    height: 100%;
+    /* display: flex; */
+    
+    
+}
+
+/*  HEADER  */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;  /* بالتالي لا تنقل باستخدام المينيو pageعدم وحودها يعني اننا ننقر علىheader  هذا ضروري لجعل النقر يصل */
+}
+
+.logo {
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+#menu-icon {
+    display: none;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+}
+
+.navbar a.active {
+    color: var(--main-color-);
+}
+
+/*  HOME LAYOUT  */
+#home .home-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* الصفحة الاولى محتواها الاول اقصى اليسار و الثاني اقصى اليمين*/
+    gap: 6rem;
+}
+
+/* النص تنسيقات حجم الخط و اللون */
+.home-text h1 {
+    font-size: 5rem;
+}
+
+.home-text h3 {
+    font-size: 2.4rem;
+}
+
+.home-text p {
+    font-size: 1.6rem;
+    margin: 1rem 0 2rem;
+}
+span {
+    color: var(--main-color-);
+}
+
+/* أيقونات */
+.social-media {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.social-media a {
+    font-size: 2.5rem;
+    color: var(--main-color-);
+}
+
+/* زر download */
+.btn {
+    /* display: inline-block; */
+    padding: 1.2rem 3rem;
+    background: var(--main-color-);
+    color: #000;
+    border-radius: 30px;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+/*  IMAGE  */
+.home-image {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.home-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    clip-path: polygon(
+        25% 0%,
+        75% 0%,
+        100% 50%,
+        75% 100%,
+        25% 100%,
+        0% 50%
+    );
+    z-index: 2;
+}
+
+/*  HEX DECOR  */
+.hex {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background: #d4b48c;
+    clip-path: polygon(
+        25% 0%,
+        75% 0%,
+        100% 50%,
+        75% 100%,
+        25% 100%,
+        0% 50%
+    );
+    z-index: 1;
+}
+
+.hex-1 {
+    top: -30px;
+    right: -40px;
+}
+
+.hex-2 {
+    left: -50px;
+    top: 40%;
+}
+
+.hex-3 {
+    bottom: -35px;
+    right: 10px;
+}
+
+/*  PAGES  */
+.page {
+    position: relative;
+    min-height: 100vh; /* كل صفحة تغطي كامل الشاشة */
+    display: none;
+    padding: 10rem 9% 2rem; /* كما لديك */
+    justify-content: space-between;
+    align-self: center;
+    inset: 0;
+}
+
+.page.active {
+    display: block;
+}
+.book {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/*  CONTROLS  */
+.book-controls {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translatey(-50%);
+}
+
+.book-controls button {
+    padding: 0.3cm 2cm;
+    font-size: 10pt;
+    background: var(--main-color-);
+    border-radius: 30px;
+}
+.aboutMe-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.aboutMe-text {
+    font-size: 10pt ;
+    font-style: italic;
+    color: var(--text-color);
+    margin: 1rem 0 2rem;
+
+}
+
+/* صور متحركة بشكل دائري */
+.certif {
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial;
+}
+
+/* المشهد */
+.scene {
+  perspective: 1000px;
+}
+
+/* الحاوية الدوّارة */
+.carousel {
+  position: center; /* عندما كانت relative كان المركز متحرك يمين يسار*/
+  margin-left: auto;
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+  animation: rotate 20s linear infinite;
+  --count: 6;
+}
+
+/* كل عنصر */
+.item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-style: preserve-3d;
+  text-align: center;
+  transition: transform 0.4s;
+  transform:
+    translate(-50%, -50%)
+    rotateY(calc(var(--i) * (360deg / var(--count))))
+    translateZ(250px);    
+ 
+}
+
+/* الصورة */
+.item img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.4s;
+}
+
+/* النص */
+.item span {
+  display: block;
+  margin-top: 10px;
+  color: #0ef;
+  font-size: 14px;
+  transition: transform 0.4s;
+}
+
+/* تأثير hover */
+.item:hover img {
+  transform: scale(1.2);
+}
+
+.item:hover span {
+  transform: scale(1.2);
+}
+
+/* دوران تلقائي */
+@keyframes rotate {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(360deg); }
+}
+
+/* PROJECTS PAGE ONLY */
+
+#projects {
+  padding-top: 12rem;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  justify-content: center;
+}
+
+/* الكرت */
+.drop-card {
+  text-align: center;
+  text-decoration: none;
+}
+
+/* القطرة */
+.drop  img{
+  width: 160px;
+  height: 160px;
+  background: rgba(0, 255, 255, 0.25);
+  border-radius: 44% 56% 65% 35% / 57% 58% 42% 43%;
+  box-shadow:
+    inset 10px 10px 20px rgba(255,255,255,0.35),
+    inset -10px -10px 20px rgba(0,0,0,0.25),
+    0 15px 30px rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.4s ease;
+}
+
+/* النص */
+.drop-card p {
+  margin-top: 1.2rem;
+  font-size: 1.4rem;
+  color: #0ef;
+  transition: transform 0.4s ease;
+}
+
+/* التفاعل */
+.drop-card:hover .drop {
+  transform: scale(1.15);
+}
+
+.drop-card:hover p {
+  transform: scale(1.15);
+}
+
+/*  CONTACT 3D  */
+
+#contact {
+  display: flex;  /* بدونها تاخذ محتويات هذه الصفحة الجانب الايسر*/
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.contact-title {
+  font-size: 3.5rem;
+}
+
+/* الحاوية ثلاثية الأبعاد */
+.contact-3d {
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 800px;
+  justify-content: center;
+}
+
+/* كل طابق */
+.contact-item {
+  position: relative;
+  width: 260px;
+  height: 70px;
+  background: #2b2f3a;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-left: 2rem;
+  margin: 1.2rem 0;
+  font-size: 1.8rem;
+  text-decoration: none;
+  transform: translateZ(0);
+  transition: all 0.4s ease;
+  box-shadow: -20px 20px 40px rgba(0,0,0,0.4);
+}
+
+/* ترتيب الطوابق */
+.contact-item:nth-child(1) {
+  transform: translateY(0) translateZ(40px);
+}
+.contact-item:nth-child(2) {
+  transform: translateY(0) translateZ(20px);
+}
+.contact-item:nth-child(3) {
+  transform: translateY(0) translateZ(0);
+}
+
+/* الأيقونة */
+.contact-item i {
+  font-size: 3rem;
+}
+
+/* Hover */
+.contact-item:hover {
+  background: #8b5cf6;
+  transform: translateX(-20px) translateZ(60px);
+}
+
+/* ظل جانبي */
+.contact-item::after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  top: 0;
+  width: 20px;
+  height: 100%;
+  background: rgba(0,0,0,0.35);
+  transform: skewY(-45deg);
+  transform-origin: left;
+}
+
+/*  MY ART PAGE ONLY*/
+
+#myArt {
+  /* display: flex; */          /*هنا وجودها يجعل  صفجة التواصل تحتفي و تكرر صفحة الفنون*/
+  justify-content: space-between;
+  align-items: center;
+}
+
+.myart-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8%;
+}
+
+/* الحاوية العامة لكل بقعة */
+.art-spot {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  
+}
+
+/* العنوان */
+.art-title {
+  margin-bottom: 2rem;
+  font-size: 2.6rem;
+  color: #0ef;
+}
+
+/* البقعة */
+.paint-blob {
+  width: 300px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0ef, #3a86ff);
+  border-radius: 55% 45% 60% 40% / 45% 60% 40% 55%;
+  box-shadow:
+    inset 15px 15px 30px rgba(255,255,255,0.35),
+    inset -15px -15px 30px rgba(0,0,0,0.25),
+    0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* الصور داخل البقعة */
+.art-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+/* الصورة الظاهرة */
+.art-image.active {
+  opacity: 1;
+}
+
