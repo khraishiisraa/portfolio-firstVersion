@@ -1,7 +1,7 @@
 const pages = document.querySelectorAll(".page");
 const navLinks = document.querySelectorAll(".nav-link");
 
-let currentPage = 0; // مصدر الحقيقة
+let currentPage = 0; 
 
 
 
@@ -12,7 +12,7 @@ function showPage(index) {
     pages[index].classList.add("active");
     navLinks[index].classList.add("active");
 
-    currentPage = index; // ← هذا السطر مهم جدًا
+    currentPage = index; 
     updateButtons();
 }
 
