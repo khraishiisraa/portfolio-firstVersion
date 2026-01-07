@@ -13,7 +13,6 @@ function showPage(index) {
     currentPage = index; 
     updateButtons();
 }
-
 // إذا زر يعمل بالكود لكنه لا يستجيب →
 //header,.pageا ما حدث في  JSابحثي عن عنصر يغطيه وليس عن خطأ  
 // التنقل من المنيو

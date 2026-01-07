@@ -153,7 +153,7 @@ span {
     position: absolute;
     width: 90px;
     height: 90px;
-    background: #d4b48c;
+    background: #8dfbf9;
     clip-path: polygon(
         25% 0%,
         75% 0%,
@@ -304,7 +304,6 @@ span {
 }
 
 /* PROJECTS PAGE ONLY */
-
 #projects {
   padding-top: 12rem;
 }
@@ -433,7 +432,7 @@ span {
 
 /*  MY ART PAGE ONLY*/
 #myArt {
-  /* display: flex; */          /*هنا وجودها يجعل  صفجة التواصل تحتفي و تكرر صفحة الفنون*/
+  /* display: flex;           /*هنا وجودها يجعل  صفجة التواصل تحتفي و تكرر صفحة الفنون */
   justify-content: space-between;
   align-items: center;
 }
