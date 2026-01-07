@@ -3,8 +3,6 @@ const navLinks = document.querySelectorAll(".nav-link");
 
 let currentPage = 0; 
 
-
-
 function showPage(index) {
     pages.forEach(page => page.classList.remove("active"));
     navLinks.forEach(link => link.classList.remove("active"));
@@ -47,7 +45,6 @@ function updateButtons() {
     document.getElementById("next").style.display =
         currentPage === pages.length - 1 ? "none" : "inline-block";
 }
-
 
 // صور شهادات دورات تتوقف عند اقتراب السهم
 const carousel = document.querySelector(".carousel");

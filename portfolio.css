@@ -432,7 +432,6 @@ span {
 }
 
 /*  MY ART PAGE ONLY*/
-
 #myArt {
   /* display: flex; */          /*هنا وجودها يجعل  صفجة التواصل تحتفي و تكرر صفحة الفنون*/
   justify-content: space-between;
